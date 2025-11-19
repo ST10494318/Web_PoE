@@ -1,0 +1,24 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /cgi-bin/
+
+# Sitemap location
+Sitemap: https://greenearthinitiative.org/sitemap.xml
+
+# Crawl delay
+Crawl-delay: 1
+
+# Allow search engines to index images
+Allow: /images/
+
+# Specific rules for search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
