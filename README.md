@@ -79,7 +79,7 @@ Corporate sponsors (CSR programs)
 Schools and universities (partnerships)
 
 2. Website Goals and Objectives
-Primary Goal: Increase volunteer sign-ups by 50% and donations by 30% within a year.
+Primary Goal:To increase volunteer sign-ups by 50% and donations by 30% within a year.
 
 KPIs:
 
@@ -117,11 +117,14 @@ Wireframe / Site Map:
 https://github.com/user-attachments/assets/0c6ec3f7-7f7a-41a4-b07b-422e622e0fe3
 
 6. Technical Requirements
-Hosting: Shared hosting (e.g., Afrihost)
-Domain: greenearth.org.za (R200/year)
+7. 
+
+Hosting: Shared hosting example Afrihost.
+
+Domain name : greenearth.edu.za (R200/year)
 Tech Stack: HTML5, CSS3, JavaScript (advanced form validation and interactivity)
 
-7. Timeline & Budget
+8. Timeline & Budget
 Timeline:
 
 Week 1: Research & content gathering
