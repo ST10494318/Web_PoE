@@ -8,6 +8,10 @@ Module: HMAW0501
 Project Overview
 A comprehensive website for Green Earth Initiative, an environmental NGO focused on community clean-ups and environmental education in South Africa.
 
+Repo link:
+
+https://github.com/ST10494318/Web_PoE.git
+
 Change Log
 
 Major Enhancements Implemented
