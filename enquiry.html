@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Enquiry - Green Earth Initiative | Costs & Availability</title>
+    <meta name="description" content="Enquire about Green Earth Initiative's environmental services, volunteer opportunities, or sponsorship options. Get detailed information about costs and availability.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Green Earth Initiative - Environmental Conservation NGO">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="programs.html" class="nav-link">PROGRAMS</a></li>
+                <li><a href="getinvolved.html" class="nav-link">GET INVOLVED</a></li>
+                <li><a href="enquiry.html" class="nav-link active">ENQUIRE</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Service Enquiry</h1>
+            <p>Get detailed information about our programs, costs, and availability</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Make an Enquiry</h2>
+                <p>Tell us about your specific needs and we'll provide detailed information</p>
+            </div>
+
+            <div class="form-container fade-in">
+                <form id="enquiryForm" action="thank-you.html?type=enquiry" method="POST">
+                    <div class="form-group">
+                        <label for="enquiryType">Enquiry Type *</label>
+                        <select id="enquiryType" name="enquiryType" class="form-control" required>
+                            <option value="">Select enquiry type</option>
+                            <option value="workshop">School Workshop</option>
+                            <option value="cleanup">Community Clean-up</option>
+                            <option value="volunteer">Volunteer Opportunities</option>
+                            <option value="sponsorship">Corporate Sponsorship</option>
+                            <option value="partnership">Community Partnership</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="enquiryFname">First Name *</label>
+                            <input type="text" id="enquiryFname" name="firstname" class="form-control" required minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryLname">Last Name *</label>
+                            <input type="text" id="enquiryLname" name="lastname" class="form-control" required minlength="2">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="enquiryEmail">Email Address *</label>
+                            <input type="email" id="enquiryEmail" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="enquiryPhone">Phone Number *</label>
+                            <input type="tel" id="enquiryPhone" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryOrganization">Organization/School</label>
+                        <input type="text" id="enquiryOrganization" name="organization" class="form-control">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryParticipants">Number of Participants (if applicable)</label>
+                        <input type="number" id="enquiryParticipants" name="participants" class="form-control" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryDate">Preferred Date (if applicable)</label>
+                        <input type="date" id="enquiryDate" name="preferredDate" class="form-control" min="<?= date('Y-m-d') ?>">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryBudget">Estimated Budget (ZAR)</label>
+                        <select id="enquiryBudget" name="budget" class="form-control">
+                            <option value="">Select budget range</option>
+                            <option value="0-1000">R0 - R1,000</option>
+                            <option value="1000-5000">R1,000 - R5,000</option>
+                            <option value="5000-10000">R5,000 - R10,000</option>
+                            <option value="10000+">R10,000+</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="enquiryDetails">Specific Requirements *</label>
+                        <textarea id="enquiryDetails" name="details" class="form-control" rows="5" required minlength="20" placeholder="Please provide specific details about your enquiry, including any special requirements, desired outcomes, or questions about costs and availability..."></textarea>
+                        <small>Minimum 20 characters required</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: start; gap: 0.5rem;">
+                            <input type="checkbox" required style="margin-top: 0.3rem;">
+                            <span>I agree to the privacy policy and terms of service *</span>
+                        </label>
+                    </div>
+
+                    <button  type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                        <li><a href="thank-you.html" class="nav-link">Submit Enquiry</a></li>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background: var(--light-green);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers to common enquiries</p>
+            </div>
+
+            <div class="accordion-container">
+                <div class="accordion">
+                    <button class="accordion-header">
+                        What is the cost of a school workshop?
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Our school workshops start from R500 for a 1-hour session for up to 30 students. Costs may vary based on duration, materials required, and travel distance. We offer discounted rates for multiple sessions and under-resourced schools.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <button class="accordion-header">
+                        How far in advance should I book?
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We recommend booking at least 2-3 weeks in advance for school workshops and 1-2 weeks for community clean-ups. For larger events or corporate partnerships, we suggest contacting us 4-6 weeks ahead.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <button class="accordion-header">
+                        Do you offer services outside Cape Town?
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>Yes! We serve communities throughout the Western Cape. Additional travel costs may apply for locations beyond 50km from our Brackenfell office. Contact us to discuss your specific location requirements.</p>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <button class="accordion-header">
+                        What sponsorship opportunities are available?
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <p>We offer various sponsorship levels: Bronze (R500), Silver (R2,000), Gold (R5,000), and Platinum (R10,000+). Each level includes different benefits such as branding opportunities, impact reports, and corporate volunteer days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Green Earth Initiative</h3>
+                    <p>Creating sustainable environmental change through community action and education in South Africa.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="getinvolved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 Brackenfell, Cape Town 7560</p>
+                    <p>📞 +27 21 123 4567</p>
+                    <p>✉️ info@greenearth.org.za</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest events and initiatives</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://www.facebook.com">Facebook</a>
+                    <a href="https://www.instagram.com">Instagram</a>
+                    <a href="https://x.com">Twitter</a>
+                </div>
+                <p>&copy; 2025 Green Earth Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
