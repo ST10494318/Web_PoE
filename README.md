@@ -2,7 +2,7 @@ Green Earth Initiative Website
 
 Student: Chris Lufuilu
 Student Number: ST10494318
-Course: Web Development (Introduction) WEDE5020
+Course: Web Development WEDE5020
 Module: HMAW0501
 
 Project Overview
