@@ -228,6 +228,12 @@ Since my website is a fictional web and most of the content was created by me, h
 
 Images & Logo: AI-generated images from OpenAI (2024)
 
+JavaScript Info. (n.d.). The Modern JavaScript Tutorial. Retrieved July 18, 2023, from https://javascript.info/
+
+Codecademy. (n.d.). Learn JavaScript Fundamentals. Retrieved July 18, 2023, from https://www.codecademy.com/learn/learn-javascript-fundamentals
+
+Khan, A. (2021, September 27). A beginner's guide to Git: What is a changelog and how to generate it. freeCodeCamp. Retrieved July 18, 2023, from https://www.freecodecamp.org/news/a-beginners-guide-to-git-what-is-a-changelog-and-how-to-generate-it/
+
 HTML/CSS Code Reference: W3Schools HTML & CSS tutorials
 
 Form Validation: JavaScript best practices from MDN Web Docs
