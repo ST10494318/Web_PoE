@@ -224,6 +224,8 @@ Desktop Views:
 
 
 8. References
+
+   
 Since my website is a fictional web and most of the content was created by me, here is a list of references used:
 
 Images & Logo: AI-generated images from OpenAI (2024)
