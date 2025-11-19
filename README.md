@@ -221,6 +221,8 @@ Desktop Views:
 <img width="1920" height="3874" alt="screencapture-127-0-0-1-5500-workshop-request-html-2025-11-19-19_18_43" src="https://github.com/user-attachments/assets/ea4c52e2-73d7-41fb-b940-6a6b36b07152" />
 <img width="1920" height="3445" alt="screencapture-127-0-0-1-65304-thank-you-html-2025-11-19-19_20_45" src="https://github.com/user-attachments/assets/ef942026-295f-4319-a695-5ae06cefd61e" />
 
+
+
 8. References
 Since my website is a fictional web and most of the content was created by me, here is a list of references used:
 
