@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Clean-up - Green Earth Initiative | Community Events</title>
+    <meta name="description" content="Join Green Earth Initiative's community clean-up events. Help clean parks, rivers, and public spaces while making a visible environmental impact in South Africa.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/logo.png" alt="Green Earth Initiative - Environmental Conservation NGO">
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">HOME</a></li>
+                <li><a href="about.html" class="nav-link">ABOUT</a></li>
+                <li><a href="programs.html" class="nav-link">PROGRAMS</a></li>
+                <li><a href="getinvolved.html" class="nav-link">GET INVOLVED</a></li>
+                <li><a href="enquiry.html" class="nav-link">ENQUIRE</a></li>
+                <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content fade-in">
+            <h1>Join a Clean-up Event</h1>
+            <p>Make a visible difference in your community - one clean-up at a time</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Upcoming Clean-up Events</h2>
+                <p>Register to join our next community environmental action</p>
+            </div>
+
+            <div class="events-grid">
+                <div class="event-card fade-in">
+                    <div class="event-date">30 APR 2025 | 09:00 AM - 12:00 PM</div>
+                    <div class="event-content">
+                        <h3>Brackenfell Community Clean-up</h3>
+                        <p><strong>Location:</strong> Brackenfell Public Parks & Streets</p>
+                        <p><strong>Meeting Point:</strong> Brackenfell High School Parking Lot</p>
+                        <p>Join us for a comprehensive clean-up of public spaces in Brackenfell. All equipment provided. Suitable for all ages.</p>
+                        <button class="btn" onclick="registerEvent('Brackenfell Clean-up - 30 April 2025')">Register Now</button>
+                    </div>
+                </div>
+
+                <div class="event-card fade-in">
+                    <div class="event-date">15 MAY 2025 | 09:00 AM - 12:00 PM</div>
+                    <div class="event-content">
+                        <h3>Brackenfell High School Area Clean-up</h3>
+                        <p><strong>Location:</strong> School premises and surrounding areas</p>
+                        <p><strong>Meeting Point:</strong> Main School Gate</p>
+                        <p>Focus on cleaning school environment while educating students about waste management and conservation.</p>
+                        <button class="btn" onclick="registerEvent('Brackenfell High Clean-up - 15 May 2025')">Register Now</button>
+                    </div>
+                </div>
+
+                <div class="event-card fade-in">
+                    <div class="event-date">30 MAY 2025 | 09:00 AM - 12:00 PM</div>
+                    <div class="event-content">
+                        <h3>Kuils River Clean-up</h3>
+                        <p><strong>Location:</strong> Kuils River banks and surrounding areas</p>
+                        <p><strong>Meeting Point:</strong> Kuils River Sports Complex</p>
+                        <p>Help protect our waterways by cleaning the river banks and preventing pollution from reaching the ocean.</p>
+                        <button class="btn" onclick="registerEvent('Kuils River Clean-up - 30 May 2025')">Register Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="section" id="registrationSection" style="display: none; background: var(--light-green);">
+        <div class="container">
+            <div class="form-container fade-in">
+                <h2 id="eventTitle" style="color: var(--primary-green); text-align: center; margin-bottom: 2rem;"></h2>
+                
+                <form id="cleanupForm" action="thank-you.html?type=cleanup" method="POST">
+                    <input type="hidden" id="selectedEvent" name="event">
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="regfname">First Name *</label>
+                            <input type="text" id="regfname" name="firstname" class="form-control" required minlength="2">
+                        </div>
+                        <div class="form-group">
+                            <label for="reglname">Last Name *</label>
+                            <input type="text" id="reglname" name="lastname" class="form-control" required minlength="2">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="regemail">Email *</label>
+                            <input type="email" id="regemail" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="regphone">Phone *</label>
+                            <input type="tel" id="regphone" name="phone" class="form-control" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regparticipants">Number of Participants *</label>
+                        <input type="number" id="regparticipants" name="participants" class="form-control" required min="1" value="1" max="10">
+                        <small>If registering for a group, please provide names of all participants in the notes below</small>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regage">Age Group of Participants</label>
+                        <select id="regage" name="agegroup" class="form-control">
+                            <option value="adults">Adults only (18+)</option>
+                            <option value="family">Family with children</option>
+                            <option value="teens">Teenagers (13-17)</option>
+                            <option value="mixed">Mixed ages</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regexperience">Previous Clean-up Experience</label>
+                        <select id="regexperience" name="experience" class="form-control">
+                            <option value="none">First time</option>
+                            <option value="some">1-2 times</option>
+                            <option value="experienced">3+ times</option>
+                            <option value="regular">Regular volunteer</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regemergency">Emergency Contact Details *</label>
+                        <input type="text" id="regemergency" name="emergency" class="form-control" required placeholder="Name and phone number">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="regnotes">Additional Notes or Special Requirements</label>
+                        <textarea id="regnotes" name="notes" class="form-control" rows="3" placeholder="Any medical conditions, allergies, accessibility needs, or other information we should know..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: start; gap: 0.5rem;">
+                            <input type="checkbox" required style="margin-top: 0.3rem;">
+                            <span>I understand and agree to the safety guidelines and terms of participation *</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: start; gap: 0.5rem;">
+                            <input type="checkbox" required style="margin-top: 0.3rem;">
+                            <span>I confirm that I am in good physical health to participate in outdoor activities *</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: start; gap: 0.5rem;">
+                            <input type="checkbox" style="margin-top: 0.3rem;">
+                            <span>I consent to being photographed during the event for promotional purposes</span>
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label style="display: flex; align-items: start; gap: 0.5rem;">
+                            <input type="checkbox" checked style="margin-top: 0.3rem;">
+                            <span>Send me updates about this event and future clean-up opportunities</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 1.1rem;">
+                        Complete Registration
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What to Bring</h2>
+                <p>Come prepared for a productive and safe clean-up experience</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <h3>👕 Comfortable Clothing</h3>
+                    <p>Wear clothes you don't mind getting dirty. Consider layers for changing weather conditions.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>👟 Sturdy Footwear</h3>
+                    <p>Closed shoes are essential for protection. Avoid sandals or open-toed shoes.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>💧 Water & Snacks</h3>
+                    <p>Stay hydrated and energized. We provide water, but bring your reusable bottle.</p>
+                </div>
+                <div class="feature-card fade-in">
+                    <h3>🧴 Sun Protection</h3>
+                    <p>Hat, sunscreen, and sunglasses recommended for outdoor events.</p>
+                </div>
+            </div>
+
+            <div class="feature-card fade-in" style="text-align: center; margin-top: 2rem; background: var(--light-green);">
+                <h3 style="color: var(--primary-green);">We Provide All Equipment!</h3>
+                <p>Gloves, bags, pickers, safety vests, first aid, and refreshments are provided for all participants.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Guidelines Accordion -->
+    <section class="section" style="background: var(--light-green);">
+        <div class="container">
+            <div class="section-header">
+                <h2>Safety Guidelines</h2>
+                <p>Important information for a safe and successful clean-up</p>
+            </div>
+
+            <div class="accordion-container">
+                <div class="accordion">
+                    <button class="accordion-header">
+                        Before the Event
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Wear appropriate clothing and closed shoes</li>
+                            <li>Bring any necessary medications</li>
+                            <li>Eat a good breakfast and stay hydrated</li>
+                            <li>Check the weather forecast and dress accordingly</li>
+                            <li>Arrive 15 minutes early for registration and briefing</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <button class="accordion-header">
+                        During the Clean-up
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Always wear provided gloves and safety gear</li>
+                            <li>Work in pairs or small groups</li>
+                            <li>Stay within designated clean-up areas</li>
+                            <li>Don't touch sharp objects or hazardous materials</li>
+                            <li>Take regular breaks and drink water</li>
+                            <li>Follow instructions from team leaders</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <button class="accordion-header">
+                        What Not to Do
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Don't pick up syringes, needles, or broken glass</li>
+                            <li>Don't enter private property or restricted areas</li>
+                            <li>Don't lift heavy objects alone</li>
+                            <li>Don't approach wildlife or disturb habitats</li>
+                            <li>Don't clean up hazardous chemicals or unknown substances</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion">
+                    <button class="accordion-header">
+                        In Case of Emergency
+                        <span></span>
+                    </button>
+                    <div class="accordion-content">
+                        <ul>
+                            <li>Notify a team leader immediately</li>
+                            <li>First aid kit and trained personnel are available</li>
+                            <li>Emergency contact numbers are provided at registration</li>
+                            <li>Know the location of the nearest medical facility</li>
+                            <li>Follow emergency evacuation procedures if needed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Green Earth Initiative</h3>
+                    <p>Creating sustainable environmental change through community action and education in South Africa.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="programs.html">Our Programs</a></li>
+                        <li><a href="getinvolved.html">Get Involved</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p>📍 Brackenfell, Cape Town 7560</p>
+                    <p>📞 +27 21 123 4567</p>
+                    <p>✉️ info@greenearth.org.za</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Stay updated with our latest events and initiatives</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-input" placeholder="Your email address" required>
+                        <button type="submit" class="btn">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="social-links">
+                    <a href="https://www.facebook.com">Facebook</a>
+                    <a href="https://www.instagram.com">Instagram</a>
+                    <a href="https://x.com">Twitter</a>
+                </div>
+                <p>&copy; 2025 Green Earth Initiative. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function registerEvent(eventName) {
+            document.getElementById('selectedEvent').value = eventName;
+            document.getElementById('eventTitle').textContent = 'Register for: ' + eventName;
+            document.getElementById('registrationSection').style.display = 'block';
+            
+            document.getElementById('registrationSection').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>
